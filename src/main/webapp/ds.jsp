@@ -22,9 +22,10 @@
      out.print(rs.getString(1));
     }
    } catch ( Exception e ) {
-     out.println(e.printStackTrace());
+     out.println(e);
    } finally {
      if ( ps != null ) try { ps.close(); } catch(Exception e) {}
      if ( con != null ) try { con.close(); } catch(Exception e) {} 
    }
 %>
+..
