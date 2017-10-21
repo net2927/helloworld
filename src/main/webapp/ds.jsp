@@ -13,7 +13,7 @@
 
    try {
     ctx = new InitialContext();
-    ds = (DataSource) ctx.lookup("mysqlDS");
+    ds = (DataSource) ctx.lookup("java:comp/env/mysqlDS");
     con = ds.getConnection();
 
     ps = con.prepareStatement(sql);
