@@ -24,8 +24,9 @@
    } catch ( Exception e ) {
      out.println(e);
    } finally {
+     if ( rs != null ) try { rs.close(); } catch(Exception e) {}
      if ( ps != null ) try { ps.close(); } catch(Exception e) {}
-     if ( con != null ) try { con.close(); } catch(Exception e) {} 
-   }
+     if ( con != null ) try { con.close(); } catch(Exception e) {}
+     if ( ctx != null ) try { ctx.close(); } catch(Exception e) {}
+  }
 %>
-..
